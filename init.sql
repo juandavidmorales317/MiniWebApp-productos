@@ -13,3 +13,14 @@ CREATE TABLE users (
 
 INSERT INTO users VALUES(null, "juan", "juan@gmail.com", "juan", "123"),
     (null, "maria", "maria@gmail.com", "maria", "456");
+
+CREATE TABLE productos (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  descripcion VARCHAR(255),
+  precio DECIMAL(10,2) NOT NULL,
+  stock INT NOT NULL DEFAULT 0
+);
+INSERT INTO productos (nombre, descripcion, precio, stock) VALUES
+('Martillo', 'Martillo de acero 16 oz', 25000, 10),
+('Destornillador', 'Plano de 6 pulgadas', 8000, 25);
